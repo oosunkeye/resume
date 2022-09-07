@@ -24,9 +24,10 @@ Variables
   --clr-primary-7: hsl(43, 90%, 76%);
   --clr-primary-8: hsl(45, 86%, 81%);
   --clr-primary-9: hsl(45, 90%, 88%);
-  --clr-primary-10: hsl(45, 100%, 96%);
+  --clr-primary-10: hsl(210, 31%, 80%);
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
+
+   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
@@ -447,6 +448,7 @@ Services
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  box-shadow: 0px 2px 2px gray;
 }
 .service-icon {
   font-size: 2rem;
@@ -458,16 +460,13 @@ Services
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
-.service p {
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
 .service:hover {
   background: var(--clr-primary-5);
+  background: hsl(210, 31%, 80%);
   color: var(--clr-white);
 }
-.service:hover p {
-  color: var(--clr-white);
+.service img:hover {
+  transform: scale(112%);
 }
 .service:hover .underline {
   background: var(--clr-white);
@@ -719,9 +718,14 @@ Skills
 .value-70 {
   width: 70%;
 }
+.value-90 {
+  width: 90%;
+}
+
 .value-80 {
   width: 80%;
 }
+
 .skill-text {
   position: absolute;
   top: -2rem;
@@ -850,7 +854,7 @@ Blog
   padding: 1rem 1.5rem;
 }
 .card-front img {
-  height: 13rem;
+  height: 10rem;
   -o-object-fit: cover;
   object-fit: cover;
   border-top-left-radius: var(--radius);
@@ -894,6 +898,7 @@ Footer
 }
 .footer .social-icons {
   margin-bottom: 2rem;
+  padding-left: 8rem;
 }
 .footer .social-icon {
   color: var(--clr-primary-5);
@@ -918,8 +923,9 @@ Single Page
   max-width: 700px;
 }
 .page-info a {
-  text-transform: uppercase;
-  color: var(--clr-primary-5);
+  /* text-transform: capitalize; */
+  font-weight: bold;
+  color: red;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
